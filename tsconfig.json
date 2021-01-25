@@ -15,9 +15,9 @@
             "es5"
         ],
         "declaration": true,
-        "outDir": "./"
+        "outDir": "js"
     },
     "files": [
-        "./main.ts"
+        "js/background.ts"
     ]
 }
