@@ -18,6 +18,6 @@
         "outDir": "js"
     },
     "files": [
-        "js/background.ts"
+        "public/scripts/background.ts"
     ]
 }
