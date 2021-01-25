@@ -1,2 +1,2 @@
 # ryanstewart.gay
- Hosting for my website, www.ryanstewart.gay.
+For my website, www.ryanstewart.gay.
