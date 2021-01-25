@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-    entry: "/js/background.ts",
+    entry: "js/background.ts",
     output: {
         filename: "backgroundoutput.js",
         path: path.resolve(__dirname, "js")
