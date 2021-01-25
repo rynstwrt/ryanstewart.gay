@@ -1,10 +1,10 @@
 const path = require("path");
 
 module.exports = {
-    entry: "js/background.ts",
+    entry: "public/scripts/background.ts",
     output: {
         filename: "backgroundoutput.js",
-        path: path.resolve(__dirname, "js")
+        path: path.resolve(__dirname, "public/scripts")
     },
     resolve: {
         extensions: [".ts"]
