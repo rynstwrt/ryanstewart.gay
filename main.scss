@@ -1,0 +1,69 @@
+$background-color: #131313;
+$text-color: white;
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    background-color: $background-color;
+    color: $text-color;
+    text-transform: uppercase;
+    font-family: "Yusei Magic", sans-serif;
+}
+
+ul
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+
+    li
+    {
+        margin-left: .75rem;
+    }
+}
+
+a
+{
+    color: inherit;
+    text-decoration: inherit;
+
+    &:hover
+    {
+        text-decoration: underline;
+        text-decoration-style: dotted;
+    }
+}
+
+#header
+{
+    background-color: rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+
+#container
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
