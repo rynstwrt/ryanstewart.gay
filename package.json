@@ -1,0 +1,26 @@
+{
+  "name": "ryanstewart.gay",
+  "version": "1.0.0",
+  "description": "Package for my website, www.ryanstewart.gay.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rynstwrt/ryanstewart.gay.git"
+  },
+  "keywords": [
+    "website",
+    "personal"
+  ],
+  "author": "Ryan Stewart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rynstwrt/ryanstewart.gay/issues"
+  },
+  "homepage": "https://github.com/rynstwrt/ryanstewart.gay#readme",
+  "dependencies": {
+    "babylonjs": "^4.2.0"
+  }
+}
