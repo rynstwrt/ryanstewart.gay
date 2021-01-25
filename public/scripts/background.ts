@@ -1,4 +1,4 @@
-import { Engine, Scene, Color4, Vector3, Mesh, StandardMaterial, ArcRotateCamera, Color3, PointLight } from "babylonjs";
+import { Engine, Scene, Color4, Vector3, Mesh, StandardMaterial, ArcRotateCamera, Color3 } from "babylonjs";
 
 const canvas: any = document.getElementsByTagName("canvas")[0];
 const engine: Engine = new Engine(canvas);
