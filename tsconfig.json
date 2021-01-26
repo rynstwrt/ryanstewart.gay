@@ -15,7 +15,7 @@
             "es5"
         ],
         "declaration": true,
-        "outDir": "js"
+        "outDir": "public/scripts"
     },
     "files": [
         "public/scripts/background.ts"

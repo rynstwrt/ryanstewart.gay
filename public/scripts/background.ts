@@ -5,7 +5,7 @@ const engine: Engine = new Engine(canvas);
 const scene: Scene = new Scene(engine);
 scene.clearColor = new Color4(0, 0, 0, 0);
 
-const knot = Mesh.CreateTorusKnot("knot", 7, 17, 1000, 10, 50, 50, scene);
+const knot = Mesh.CreateTorusKnot("knot", 7, 17, 300, 10, 50, 50, scene);
 knot.scaling = Vector3.Zero();
 knot.receiveShadows = false;
 
@@ -17,8 +17,6 @@ knot.material = knotMat;
 new ArcRotateCamera("camera", 0, Math.PI / 3, 500, knot.position, scene, true);
 
 let doneScaling = false;
-let doneFirstPopup = false;
-let doneSecondPopup = false;
 engine.runRenderLoop(() =>
 {
    scene.render()
@@ -28,28 +26,10 @@ engine.runRenderLoop(() =>
    knot.rotation.z += .0010;
 
    if (!doneScaling)
-   {
-      if (knot.scaling.y >= 150)
-      {
-         if (!doneFirstPopup)
-         {
-            doneFirstPopup = true;
-            document.getElementById("welcome").style.transform = "scale(1)";
-         }
-      }
-
-      if (knot.scaling.y >= 275)
-      {
-         if (!doneSecondPopup)
-         {
-            doneSecondPopup = true;
-            document.getElementById("welcome2").style.transform = "scale(1)";
-         }
-      }
-
-      if (knot.scaling.y >= 300)
-         doneScaling = true;
-      else
-         knot.scaling = knot.scaling.add(new Vector3(1, 1, 1));
-   }
+       if (knot.scaling.y >= 300)
+           doneScaling = true;
+       else
+           knot.scaling = knot.scaling.add(new Vector3(1, 1, 1));
 });
+
+window.addEventListener("resize", engine.resize);

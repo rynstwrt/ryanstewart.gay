@@ -1,0 +1,49 @@
+@keyframes popIn {
+  100% {
+    transform: scale(1);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #161616;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Yusei Magic", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 0.1rem;
+}
+
+#container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  transform: scale(0);
+  animation: popIn 0.5s ease-in-out forwards;
+}
+#container #inner-container {
+  padding: 1rem;
+  background-color: #101010;
+}
+#container #inner-container h1 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+#container #inner-container p {
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+}
+
+/*# sourceMappingURL=about.css.map */

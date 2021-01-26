@@ -1,0 +1,60 @@
+$background-color: #161616;
+$text-color: white;
+
+@keyframes popIn
+{
+    100% { transform: scale(1); }
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body
+{
+  height: 100%;
+}
+
+body
+{
+  background-color: $background-color;
+  color: $text-color;
+  text-transform: uppercase;
+  font-family: "Yusei Magic", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: .1rem;
+}
+
+#container
+{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transform: scale(0);
+    animation: popIn .5s ease-in-out forwards;
+
+    #inner-container
+    {
+        padding: 1rem;
+        background-color: #101010;
+
+        h1
+        {
+            font-size: 1.5rem;
+            text-decoration: underline;
+        }
+
+        p
+        {
+            font-size: 1rem;
+            letter-spacing: 0.05rem;
+        }
+    }
+}

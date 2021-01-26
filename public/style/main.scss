@@ -1,5 +1,10 @@
-$background-color: #131313;
+$background-color: #161616;
 $text-color: white;
+
+@keyframes popIn
+{
+    100% { transform: scale(1); }
+}
 
 *
 {
@@ -42,6 +47,12 @@ ul
     li
     {
         margin-left: .75rem;
+
+        a:hover
+        {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+        }
     }
 }
 
@@ -49,12 +60,6 @@ a
 {
     color: inherit;
     text-decoration: inherit;
-
-    &:hover
-    {
-        text-decoration: underline;
-        text-decoration-style: dotted;
-    }
 }
 
 canvas
@@ -67,26 +72,7 @@ canvas
 
 h1
 {
-    font-size: 2.5rem;
-}
-
-#header
-{
-    background-color: #101010;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: .5rem 1rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-
-    h2
-    {
-        font-size: 1rem;
-    }
+    font-size: 2.25rem;
 }
 
 #welcome, #welcome2
@@ -94,7 +80,16 @@ h1
     z-index: 1;
     text-align: center;
     transform: scale(0);
-    transition: transform .5s;
     margin: .25rem 0;
     line-height: 3rem;
+}
+
+#welcome
+{
+    animation: popIn .5s .75s ease-out forwards;
+}
+
+#welcome2
+{
+    animation: popIn .5s 1.5s ease-out forwards;
 }

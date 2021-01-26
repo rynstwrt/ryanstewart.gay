@@ -1,11 +1,23 @@
 const express = require("express");
 
 const app = express();
+app.set("view engine", "pug");
+app.set("views", __dirname + "/views")
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", (req, res) =>
 {
-   res.sendFile(__dirname + "/index.html");
+    res.render("index");
+});
+
+app.get("/about", (req, res) =>
+{
+    res.render("about");
+});
+
+app.get("/contact", (req, res) =>
+{
+    res.render("contact");
 });
 
 const port = process.env.PORT || 80;

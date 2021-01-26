@@ -1,3 +1,8 @@
+@keyframes popIn {
+  100% {
+    transform: scale(1);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +14,7 @@ html, body {
 }
 
 body {
-  background-color: #131313;
+  background-color: #161616;
   color: white;
   text-transform: uppercase;
   font-family: "Yusei Magic", sans-serif;
@@ -33,14 +38,14 @@ ul {
 ul li {
   margin-left: 0.75rem;
 }
+ul li a:hover {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
 
 a {
   color: inherit;
   text-decoration: inherit;
-}
-a:hover {
-  text-decoration: underline;
-  text-decoration-style: dotted;
 }
 
 canvas {
@@ -51,32 +56,23 @@ canvas {
 }
 
 h1 {
-  font-size: 2.5rem;
-}
-
-#header {
-  background-color: #101010;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
-}
-#header h2 {
-  font-size: 1rem;
+  font-size: 2.25rem;
 }
 
 #welcome, #welcome2 {
   z-index: 1;
   text-align: center;
   transform: scale(0);
-  transition: transform 0.5s;
   margin: 0.25rem 0;
   line-height: 3rem;
+}
+
+#welcome {
+  animation: popIn 0.5s 0.75s ease-out forwards;
+}
+
+#welcome2 {
+  animation: popIn 0.5s 1.5s ease-out forwards;
 }
 
 /*# sourceMappingURL=main.css.map */
