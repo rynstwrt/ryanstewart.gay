@@ -6,7 +6,7 @@
         <option name="INDENT_SIZE" value="2" />
       </value>
     </option>
-    <codeStyleSettings language="JSON">
+    <codeStyleSettings language="SCSS">
       <indentOptions>
         <option name="INDENT_SIZE" value="4" />
       </indentOptions>

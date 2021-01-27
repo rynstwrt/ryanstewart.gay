@@ -3,9 +3,9 @@ html(lang="en")
     head
         include headtags.pug
         link(rel="stylesheet", type="text/css", href="style/main.css")
+        script(src="scripts/backgroundoutput.js" defer)
     body
         include header.pug
-        canvas#bgcanvas Your browser does not support HTML canvases!
+        canvas a
         h1#welcome Welcome to my website!
         h2#welcome2 Have a look around!
-        script(src="scripts/background.js", type="module")
