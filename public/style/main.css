@@ -1,48 +1,7 @@
-@keyframes popIn {
-  100% {
-    transform: scale(1);
-  }
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  background-color: #161616;
-  color: white;
-  text-transform: uppercase;
-  font-family: "Yusei Magic", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 0.1rem;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.75rem;
-}
-ul li {
-  margin-left: 0.75rem;
-}
-ul li a:hover {
-  text-decoration: underline;
-  text-decoration-style: dotted;
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit;
 }
 
 /*# sourceMappingURL=main.css.map */

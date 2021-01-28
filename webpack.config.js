@@ -1,4 +1,5 @@
 const path = require("path");
+const nodemonwebpack = require("nodemon-webpack-plugin");
 
 module.exports = {
     entry: "./background.js",
@@ -11,5 +12,10 @@ module.exports = {
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
     },
-    mode: "development"
+    mode: "development",
+    plugins: [new nodemonwebpack({
+        script: "./server.js",
+        watch: path.resolve("./public/scripts"),
+        verbose: true
+    })]
 };
