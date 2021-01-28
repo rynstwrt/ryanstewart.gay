@@ -1,18 +1,15 @@
 const path = require("path");
 
 module.exports = {
-    entry: "/public/scripts/background.ts",
+    entry: "./background.js",
     output: {
-        filename: "backgroundoutput.js",
-        path: path.resolve(__dirname, "public/scripts")
+        path: path.join(__dirname, "public/scripts"),
+        filename: "background.js",
+        sourceMapFilename: "background.js.map"
     },
+    devtool: "source-map",
     resolve: {
-        extensions: [".ts"]
-    },
-    module: {
-        rules: [
-            { test: /\.tsx?$/, loader: "ts-loader" }
-        ]
+        extensions: [".tsx", ".ts", ".js"],
     },
     mode: "development"
 };

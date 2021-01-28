@@ -29,11 +29,6 @@ body
     justify-content: center;
     align-items: center;
     letter-spacing: .1rem;
-
-    & > h2
-    {
-        font-size: 1rem;
-    }
 }
 
 ul
@@ -60,36 +55,4 @@ a
 {
     color: inherit;
     text-decoration: inherit;
-}
-
-canvas
-{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: none;
-}
-
-h1
-{
-    font-size: 2.25rem;
-}
-
-#welcome, #welcome2
-{
-    z-index: 1;
-    text-align: center;
-    transform: scale(0);
-    margin: .25rem 0;
-    line-height: 3rem;
-}
-
-#welcome
-{
-    animation: popIn .5s .75s ease-out forwards;
-}
-
-#welcome2
-{
-    animation: popIn .5s 1.5s ease-out forwards;
 }

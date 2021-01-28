@@ -1,28 +1,58 @@
-@keyframes popIn {
-  100% {
-    transform: scale(1);
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
+#container {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  transform: scale(0);
+  animation: popIn 0.5s ease-in-out forwards;
+}
+#container #inner-container {
+  padding: 1rem;
+  background-color: #101010;
 }
 
-body {
-  background-color: #161616;
-  color: white;
-  text-transform: uppercase;
-  font-family: "Yusei Magic", sans-serif;
+h1 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  letter-spacing: 0.1rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+label, input[type=submit] {
+  margin-top: 1rem;
+}
+
+label {
+  font-size: 1rem;
+}
+
+input:not(input[type=submit]), textarea {
+  width: 80vw;
+  border: none;
+  padding: 0.1rem;
+}
+
+input[type=submit] {
+  background: none;
+  color: inherit;
+  border: 1px solid white;
+  padding: 0 1rem;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-transform: inherit;
 }
 
 /*# sourceMappingURL=contact.css.map */
