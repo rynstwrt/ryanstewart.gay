@@ -4,7 +4,9 @@
   "description": "A website by Ryan Stewart!",
   "main": "server.js",
   "scripts": {
-    "start": "node ./"
+    "start": "node ./",
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -27,7 +29,6 @@
     "pug-cli": "^1.0.0-alpha6"
   },
   "devDependencies": {
-    "@babylonjs/core": "^4.2.0",
     "nodemon-webpack-plugin": "^4.4.4",
     "webpack": "^5.19.0",
     "webpack-cli": "^4.4.0"

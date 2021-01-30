@@ -13,9 +13,12 @@ module.exports = {
         extensions: [".tsx", ".ts", ".js"],
     },
     mode: "development",
+    watchOptions: {
+        poll: 500
+    },
     plugins: [new NodemonWebpack({
         script: "./server.js",
         watch: path.resolve("./public/scripts"),
-        verbose: true
+        delay: 500
     })]
 };

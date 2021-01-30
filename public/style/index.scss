@@ -1,4 +1,25 @@
-canvas
+$point-size: 15px;
+
+.row
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+
+    .point
+    {
+        width: $point-size;
+        height: $point-size;
+        background-color: $accent-color;
+        border-radius: 50%;
+    }
+}
+
+#container
 {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
 }

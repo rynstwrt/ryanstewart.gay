@@ -1,5 +1,17 @@
-canvas {
-  flex: 1;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 14 |         background-color: $accent-color;
+ *    |                           ^^^^^^^^^^^^^
+ *    '
+ *   index.scss 14:27  root stylesheet */
 
-/*# sourceMappingURL=index.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 14 \2502          background-color: $accent-color;\d\a    \2502                            ^^^^^^^^^^^^^\a    \2575 \a   index.scss 14:27  root stylesheet";
+}
