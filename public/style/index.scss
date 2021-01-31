@@ -4,6 +4,7 @@ h1
 {
     letter-spacing: .2rem;
     color: #F4F3EE;
+    text-align: center;
 }
 
 .row
@@ -34,8 +35,9 @@ h1
 
     &:hover
     {
-        width: $point-size * 7;
-        height: $point-size * 7;
+        $factor: 5;
+        width: $point-size * $factor;
+        height: $point-size * $factor;
     }
 
     .point-inner
@@ -52,8 +54,10 @@ h1
 
         p
         {
-            font-size: .7rem;
-            max-width: 70%;
+            width: 100%;
+            border-radius: 50%;
+            padding: 1.5rem;
+            font-size: .5rem;
             text-align: center;
         }
     }

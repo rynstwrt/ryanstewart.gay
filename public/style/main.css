@@ -56,7 +56,6 @@ a {
 }
 #nav-bar ul {
   list-style: none;
-  display: flex;
   align-items: center;
 }
 #nav-bar ul li {
@@ -67,6 +66,12 @@ a {
 #nav-bar ul li a:hover {
   text-decoration: underline;
   text-decoration-style: wavy;
+}
+
+@media (min-width: 350px) {
+  ul {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

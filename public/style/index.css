@@ -1,6 +1,7 @@
 h1 {
   letter-spacing: 0.2rem;
   color: #F4F3EE;
+  text-align: center;
 }
 
 .row {
@@ -27,8 +28,8 @@ h1 {
   align-items: center;
 }
 .point:hover {
-  width: 210px;
-  height: 210px;
+  width: 150px;
+  height: 150px;
 }
 .point .point-inner {
   opacity: 0;
@@ -42,8 +43,10 @@ h1 {
   overflow: hidden;
 }
 .point .point-inner p {
-  font-size: 0.7rem;
-  max-width: 70%;
+  width: 100%;
+  border-radius: 50%;
+  padding: 1.5rem;
+  font-size: 0.5rem;
   text-align: center;
 }
 
