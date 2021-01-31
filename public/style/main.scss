@@ -23,17 +23,13 @@ body
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 a
 {
     color: inherit;
     text-decoration: inherit;
-
-    &:hover
-    {
-        color: $accent-color;
-    }
 }
 
 #nav-bar
@@ -43,6 +39,11 @@ a
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    a:hover
+    {
+        color: $accent-color;
+    }
 
     #title
     {

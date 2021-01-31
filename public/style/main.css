@@ -15,14 +15,12 @@ body {
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 a {
   color: inherit;
   text-decoration: inherit;
-}
-a:hover {
-  color: #EF8354;
 }
 
 #nav-bar {
@@ -31,6 +29,9 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+#nav-bar a:hover {
+  color: #EF8354;
 }
 #nav-bar #title {
   position: relative;

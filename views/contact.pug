@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+head
+    include headtags.pug
+    link(rel="stylesheet", type="text/css", href="style/main.css")
+    link(rel="stylesheet", type="text/css", href="style/contact.css")
+    script(src="/scripts/contactcsshandler.js" defer)
+body
+    include navbar.pug
+    div#container
+        div#circle
+            div#circle-inner
+                h2 Contact
+                p You can find all my socials below:
+                br
+                ul
+                    li
+                        a(href="github.com/rynstwrt", target="_blank") GitHub
+                        a(href="https://twitter.com/rynstwrt", target="_blank") Twitter
+                        a(href="https://instagram.com/rynstwrt", target="_blank") Instagram
+                        a(href="https://www.mixcloud.com/RyanWhiteDTX/", target="_blank") MixCloud
+                        a(href="https://unsplash.com/@rynstwrt", target="_blank") Unsplash
