@@ -1,0 +1,59 @@
+h1 {
+  letter-spacing: 0.2rem;
+  color: #F4F3EE;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.box {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.point {
+  width: 30px;
+  height: 30px;
+  background-color: #EF8354;
+  border-radius: 50%;
+  transition: border-radius 0.1s linear;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.point:hover {
+  width: 150px;
+  height: 150px;
+}
+.point .point-inner {
+  opacity: 0;
+  border: 2px solid #F4F3EE;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.point .point-inner p {
+  width: 100%;
+  border-radius: 50%;
+  padding: 1.5rem;
+  font-size: 0.5rem;
+  text-align: center;
+}
+
+#container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=index.css.map */

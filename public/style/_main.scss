@@ -1,0 +1,22 @@
+$gray: #495159;
+$teal1: #A1E8CC;
+$teal2: #C5DECD;
+$orange1: #E5D4C0;
+$orange2: #FAC9B8;
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    background-color: $gray;
+}

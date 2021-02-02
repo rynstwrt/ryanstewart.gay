@@ -1,71 +1,7 @@
-$point-size: 30px;
+@use "main";
 
-h1
+canvas
 {
-    letter-spacing: .2rem;
-    color: #F4F3EE;
-    text-align: center;
-}
-
-.row
-{
-    display: flex;
-    align-items: center;
-    flex: 1;
-}
-
-.box
-{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
-
-.point
-{
-    width: $point-size;
-    height: $point-size;
-    background-color: #EF8354;
-    border-radius: 50%;
-    transition: border-radius .1s linear;
-    padding: .5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover
-    {
-        $factor: 5;
-        width: $point-size * $factor;
-        height: $point-size * $factor;
-    }
-
-    .point-inner
-    {
-        opacity: 0;
-        border: 2px solid #F4F3EE;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-
-        p
-        {
-            width: 100%;
-            border-radius: 50%;
-            padding: 1.5rem;
-            font-size: .5rem;
-            text-align: center;
-        }
-    }
-}
-
-#container
-{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
