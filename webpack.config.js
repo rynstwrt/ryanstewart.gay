@@ -1,15 +1,21 @@
-const path = require('path');
+const path = require("path");
+const NodemonPlugin = require("nodemon-webpack-plugin");
 
 module.exports = {
+    entry: "/cube.js",
     mode: "development",
-    entry: {
-        app: [
-            "./cube.js"
-        ]
-    },
     output: {
-        path: path.join(__dirname, "public/scripts"),
-        publicPath: "public/",
+        path: path.resolve(__dirname, "public/scripts"),
         filename: "cube.js"
-    }
+    },
+    resolve: {
+        extensions: [".js", ".ts"]
+    },
+    plugins: [new NodemonPlugin({
+        script: "./server.js",
+        watch: path.resolve("./public"),
+        ignore: ["*.js.map"],
+        ext: "js,njk,json",
+        delay: "500"
+    })]
 }

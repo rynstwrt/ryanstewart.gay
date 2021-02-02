@@ -17,31 +17,19 @@ const cubeMat = new StandardMaterial("cubemat", scene);
 cubeMat.emissiveColor = Color3.FromHexString("#495159");
 cube.material = cubeMat;
 
-const camera = new ArcRotateCamera("camera", 0, 0, 5, new Vector3(0, 0, 0), scene);
-camera.attachControl(canvas, true);
+const camera = new ArcRotateCamera("camera", 0, 0, 7, new Vector3(0, 0, 0), scene);
 
-const inc = .05;
-let increasing = true;
+const inc = .01;
 engine.runRenderLoop(() =>
 {
-   scene.render();
+    scene.render();
 
-   if (increasing)
-   {
-      cube.rotation.x += inc;
-      cube.rotation.y += inc;
-      cube.rotation.z += inc;
-   }
-   else
-   {
-      cube.rotation.x -= inc;
-      cube.rotation.y -= inc;
-      cube.rotation.z -= inc;
-   }
+    cube.rotation.y += inc;
+    camera.beta += inc;
+    if (camera.beta >= Math.PI) camera.beta = -Math.PI;
+});
 
-   if (increasing && cube.rotation.y >= Math.PI / 4)
-      increasing = false;
-   else if (!increasing && cube.rotation.y <= -Math.PI / 4)
-      increasing = true;
-
+window.addEventListener("resize", () =>
+{
+   engine.resize();
 });
