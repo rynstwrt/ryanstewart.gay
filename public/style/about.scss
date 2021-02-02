@@ -1,0 +1,20 @@
+@use "main";
+
+#text-container
+{
+    padding: 20rem 7rem 7rem 7rem;
+    letter-spacing: .1rem;
+    line-height: 3rem;
+
+    h1
+    {
+        font-size: 4rem;
+        padding-bottom: 2rem;
+        text-decoration: underline;
+    }
+
+    p
+    {
+        font-size: 2rem;
+    }
+}

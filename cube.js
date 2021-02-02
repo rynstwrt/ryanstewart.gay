@@ -12,7 +12,7 @@ const cubeMat = new defaults.StandardMaterial("cubemat", scene);
 cubeMat.emissiveColor = defaults.Color3.FromHexString("#495159");
 cube.material = cubeMat;
 
-const camera = new defaults.FreeCamera("camera", cube.position.add(new defaults.Vector3(3.25, 2.5, -22), scene));
+const camera = new defaults.FreeCamera("camera", new defaults.Vector3(0, 0, -5), scene);
 camera.target = cube.position;
 
 const inc = .0075;

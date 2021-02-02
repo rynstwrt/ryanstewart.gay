@@ -9,9 +9,9 @@ app.get("/", (req, res) =>
     res.render("index");
 });
 
-app.get("/contact", (req, res) =>
+app.get("/about", (req, res) =>
 {
-    res.render("contact");
+    res.render("about");
 });
 
 const port = process.env.PORT || 80;

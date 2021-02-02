@@ -4,6 +4,19 @@ $teal2: #C5DECD;
 $orange1: #E5D4C0;
 $orange2: #FAC9B8;
 
+@font-face
+{
+    font-family: "Roboto";
+    src: url("../assets/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face
+{
+    font-family: "Roboto";
+    src: url("../assets/Roboto-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
 *
 {
     margin: 0;
@@ -11,39 +24,43 @@ $orange2: #FAC9B8;
     box-sizing: border-box;
 }
 
+html, body
+{
+    height: 100%;
+}
+
+
 body
 {
     background-color: $gray;
-    text-transform: uppercase;
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
+    color: $orange2;
 }
 
 #navbar
 {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3rem;
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
-    height: 100px;
-    background-color: darken($gray, 10%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+    left: 0;
 
-    h1
+    a
     {
+        font-size: 2rem;
+        color: inherit;
+        text-decoration: none;
+        letter-spacing: .2rem;
+        margin-left: 2rem;
 
-    }
-
-    ul
-    {
-        display: flex;
-
-        li
+        &:hover
         {
-            list-style: none;
-            margin-left: 1rem;
+            text-decoration: underline;
+            text-decoration-style: dotted;
         }
     }
 }
