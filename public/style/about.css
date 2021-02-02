@@ -41,6 +41,16 @@ body {
   letter-spacing: 0.2rem;
   margin-left: 2rem;
 }
+@media (min-width: 576px) {
+  #navbar a {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  #navbar a {
+    font-size: 1.75rem;
+  }
+}
 #navbar a:hover {
   text-decoration: underline;
   text-decoration-style: dotted;

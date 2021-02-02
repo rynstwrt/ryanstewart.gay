@@ -4,6 +4,47 @@ $teal2: #C5DECD;
 $orange1: #E5D4C0;
 $orange2: #FAC9B8;
 
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+// Small tablets and large smartphones (landscape view)
+@mixin sm
+{
+    @media (min-width: #{$screen-sm-min})
+    {
+        @content;
+    }
+}
+
+// Small tablets (portrait view)
+@mixin md
+{
+    @media (min-width: #{$screen-md-min})
+    {
+        @content;
+    }
+}
+
+// Tablets and small desktops
+@mixin lg
+{
+    @media (min-width: #{$screen-lg-min})
+    {
+        @content;
+    }
+}
+
+// Large tablets and desktops
+@mixin xl
+{
+    @media (min-width: #{$screen-xl-min})
+    {
+        @content;
+    }
+}
+
 @font-face
 {
     font-family: "Roboto";
@@ -56,6 +97,16 @@ body
         text-decoration: none;
         letter-spacing: .2rem;
         margin-left: 2rem;
+
+        @include sm
+        {
+            font-size: 1.5rem;
+        }
+
+        @include md
+        {
+            font-size: 1.75rem;
+        }
 
         &:hover
         {

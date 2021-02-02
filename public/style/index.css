@@ -41,6 +41,16 @@ body {
   letter-spacing: 0.2rem;
   margin-left: 2rem;
 }
+@media (min-width: 576px) {
+  #navbar a {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  #navbar a {
+    font-size: 1.75rem;
+  }
+}
 #navbar a:hover {
   text-decoration: underline;
   text-decoration-style: dotted;
@@ -58,6 +68,18 @@ body {
   height: 650px;
   position: relative;
 }
+@media (min-width: 576px) {
+  #image-container {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (min-width: 768px) {
+  #image-container {
+    width: 600px;
+    height: 600px;
+  }
+}
 #image-container svg {
   position: absolute;
   width: 100%;
@@ -66,12 +88,27 @@ body {
 }
 
 canvas {
-  width: 40%;
-  height: 40%;
+  width: 260px;
+  height: 260px;
   position: absolute;
-  bottom: 0;
   left: -75px;
   bottom: -40px;
+}
+@media (min-width: 576px) {
+  canvas {
+    width: 170px;
+    height: 170px;
+    left: -60px;
+    bottom: -35px;
+  }
+}
+@media (min-width: 768px) {
+  canvas {
+    width: 300px;
+    height: 300px;
+    left: -100px;
+    bottom: -60px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
