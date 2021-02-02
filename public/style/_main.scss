@@ -11,12 +11,39 @@ $orange2: #FAC9B8;
     box-sizing: border-box;
 }
 
-html, body
-{
-    height: 100%;
-}
-
 body
 {
     background-color: $gray;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+#navbar
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: darken($gray, 10%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    h1
+    {
+
+    }
+
+    ul
+    {
+        display: flex;
+
+        li
+        {
+            list-style: none;
+            margin-left: 1rem;
+        }
+    }
 }

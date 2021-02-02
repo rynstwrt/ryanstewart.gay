@@ -109,12 +109,9 @@ eval("!function(e,t){ true?module.exports=t():0}(\"undefined\"!=typeof self?self
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-(() => {
-/*!*****************!*\
-  !*** ./cube.js ***!
-  \*****************/
-eval("const defaults = __webpack_require__(/*! ./preloadbabylon */ \"./preloadbabylon.js\").default;\r\n\r\nconst scene = new defaults.Scene(defaults.engine);\r\nscene.clearColor = new defaults.Color4(0, 0, 0, 0);\r\n\r\nconst cube = defaults.MeshBuilder.CreateBox(\"cube\", {}, scene);\r\ncube.renderOutline = true;\r\ncube.outlineWidth = .5;\r\ncube.outlineColor = defaults.Color3.FromHexString(\"#FAC9B8\");\r\n\r\nconst cubeMat = new defaults.StandardMaterial(\"cubemat\", scene);\r\ncubeMat.emissiveColor = defaults.Color3.FromHexString(\"#495159\");\r\ncube.material = cubeMat;\r\n\r\nconst camera = new defaults.FreeCamera(\"camera\", cube.position.add(new defaults.Vector3(3.25, 2.5, -22), scene));\r\ncamera.target = cube.position;\r\n\r\nconst inc = .0075;\r\ndefaults.engine.runRenderLoop(() =>\r\n{\r\n    scene.render();\r\n\r\n    cube.rotate(defaults.Axis.Y, inc, defaults.Space.LOCAL)\r\n    cube.rotate(defaults.Axis.Z, inc / 2, defaults.Space.LOCAL)\r\n});\n\n//# sourceURL=webpack://ryanstewart.gay/./cube.js?");
-})();
-
+/******/ 	// startup
+/******/ 	// Load entry module
+/******/ 	__webpack_require__("./preloadbabylon.js");
+/******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;

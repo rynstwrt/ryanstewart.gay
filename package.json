@@ -4,7 +4,8 @@
   "description": "A website by Ryan Stewart!",
   "main": "server.js",
   "scripts": {
-    "start": "node ./"
+    "start": "node ./",
+    "start:dev": "webpack --watch"
   },
   "repository": {
     "type": "git",

@@ -2,11 +2,14 @@ const path = require("path");
 const NodemonPlugin = require("nodemon-webpack-plugin");
 
 module.exports = {
-    entry: "/cube.js",
+    entry: {
+        preloadbabylon: "/preloadbabylon.js",
+        cube: "/cube.js"
+    },
     mode: "development",
     output: {
         path: path.resolve(__dirname, "public/scripts"),
-        filename: "cube.js"
+        filename: "[name].js"
     },
     resolve: {
         extensions: [".js", ".ts"]
