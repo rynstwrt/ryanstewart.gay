@@ -1,4 +1,4 @@
-@use "main";
+@use "../style/main";
 
 body
 {
@@ -10,23 +10,9 @@ body
 
 #image-container
 {
-    width: 650px;
-    height: 650px;
+    width: 250px;
+    height: 250px;
     position: relative;
-
-    @include main.md
-    {
-        $size: 600px;
-        width: $size;
-        height: $size;
-    }
-
-    @include main.sm
-    {
-        $size: 350px;
-        width: $size;
-        height: $size;
-    }
 
     svg
     {
@@ -39,27 +25,71 @@ body
 
 canvas
 {
-    width: 260px;
-    height: 260px;
+    width: 110px;
+    height: 110px;
     position: absolute;
-    left: -75px;
-    bottom: -40px;
+    left: -35px;
+    bottom: -15px;
+}
 
-    @include main.md
+@media screen and (min-width: #{main.$screen-sm-min})
+{
+    #image-container
     {
-        $size: 300px;
+        $size: 200px;
         width: $size;
         height: $size;
-        left: -100px;
-        bottom: -60px;
     }
 
-    @include main.sm
+    canvas
     {
-        $size: 170px;
+        $size: 90px;
+        width: $size;
+        height: $size;
+        left: -30px;
+        bottom: -15px;
+    }
+}
+
+@media screen and (min-width: #{main.$screen-md-min})
+{
+    #image-container
+    {
+        $size: 400px;
+        width: $size;
+        height: $size;
+    }
+
+    canvas
+    {
+        $size: 180px;
         width: $size;
         height: $size;
         left: -60px;
-        bottom: -35px;
+        bottom: -30px;
+    }
+}
+
+@media screen and (min-width: #{main.$screen-lg-min})
+{
+    // fine as is
+}
+
+@media screen and (min-width: #{main.$screen-xl-min})
+{
+    #image-container
+    {
+        $size: 550px;
+        width: $size;
+        height: $size;
+    }
+
+    canvas
+    {
+        $size: 248px;
+        width: $size;
+        height: $size;
+        left: -83px;
+        bottom: -41px;
     }
 }

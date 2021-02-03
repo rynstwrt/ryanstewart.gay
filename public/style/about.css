@@ -28,41 +28,62 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 3rem;
+  padding: 1.5rem;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
 }
 #navbar a {
-  font-size: 2rem;
+  font-size: 0.75rem;
   color: inherit;
   text-decoration: none;
   letter-spacing: 0.2rem;
-  margin-left: 2rem;
-}
-@media (min-width: 768px) {
-  #navbar a {
-    font-size: 1.75rem;
-  }
-}
-@media (min-width: 568px) {
-  #navbar a {
-    font-size: 1.5rem;
-  }
+  margin-left: 0.75rem;
 }
 #navbar a:hover {
   text-decoration: underline;
   text-decoration-style: dotted;
 }
 
-#text-container {
-  width: 100%;
-  height: 100%;
+@media screen and (min-width: 568px) {
+  #navbar a {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  #navbar {
+    padding: 2rem;
+  }
+  #navbar a {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  #navbar a {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #navbar {
+    padding: 3rem;
+  }
+  #navbar a {
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+  }
+}
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 7rem;
+}
+
+h1 {
+  font-size: 5rem;
+  text-decoration: underline;
+  text-decoration-style: wavy;
 }
 
 /*# sourceMappingURL=about.css.map */
