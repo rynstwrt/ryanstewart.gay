@@ -9,28 +9,21 @@ body
 
 img
 {
-    border-radius: 50%;
     $size: 100px;
     width: $size;
     height: $size;
-    border: 3px solid main.$orange2;
-    box-sizing: content-box;
+    border-radius: 50%;
 }
 
-h1, p
+h3
 {
-    width: 100%;
-}
-
-p
-{
-    letter-spacing: .025rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
 }
 
 a
 {
     color: inherit;
-    text-decoration: underline;
 
     &:hover
     {
@@ -38,74 +31,41 @@ a
     }
 }
 
-#container
+.row
 {
     display: flex;
+    width: 100%;
+    padding: 1rem 0;
+
+    ul
+    {
+        list-style: none;
+    }
+}
+
+#container
+{
+    width: 85%;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-
-    width: 300px;
-    overflow-y: auto;
-    max-height: 75%;
-    padding: 1rem;
+    height: 100%;
 }
 
-@media screen and (min-width: main.$screen-sm-min)
+#current-projects
 {
-    // fine as is
-}
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
 
-@media screen and (min-width: main.$screen-md-min)
-{
-    img
+    & > *
     {
-        $size: 125px;
-        width: $size;
-        height: $size;
+        flex: 1;
     }
 
-    h1
+    ul
     {
-        font-size: 2.5rem;
-    }
-
-    p
-    {
-        font-size: 1.25rem;
-    }
-
-    #container
-    {
-        width: 500px;
-    }
-}
-
-@media screen and (min-width: main.$screen-lg-min)
-{
-    // fine as is
-}
-
-@media screen and (min-width: main.$screen-xl-min)
-{
-    img
-    {
-        $size: 150px;
-        width: $size;
-        height: $size;
-    }
-
-    h1
-    {
-        font-size: 3rem;
-    }
-
-    p
-    {
-        font-size: 2rem;
-    }
-
-    #container
-    {
-        width: 900px;
+        display: block;
     }
 }

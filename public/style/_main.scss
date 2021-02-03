@@ -41,11 +41,6 @@ body
     color: $orange2;
 }
 
-h1, #navbar > a
-{
-    letter-spacing: .2rem;
-}
-
 #navbar
 {
     text-transform: uppercase;
@@ -64,6 +59,7 @@ h1, #navbar > a
         color: inherit;
         text-decoration: none;
         margin-left: .75rem;
+        letter-spacing: .2rem;
 
         &:hover
         {
