@@ -14,16 +14,16 @@ body
     height: 650px;
     position: relative;
 
-    @include main.sm
+    @include main.md
     {
-        $size: 350px;
+        $size: 600px;
         width: $size;
         height: $size;
     }
 
-    @include main.md
+    @include main.sm
     {
-        $size: 600px;
+        $size: 350px;
         width: $size;
         height: $size;
     }
@@ -45,15 +45,6 @@ canvas
     left: -75px;
     bottom: -40px;
 
-    @include main.sm
-    {
-        $size: 170px;
-        width: $size;
-        height: $size;
-        left: -60px;
-        bottom: -35px;
-    }
-
     @include main.md
     {
         $size: 300px;
@@ -61,5 +52,14 @@ canvas
         height: $size;
         left: -100px;
         bottom: -60px;
+    }
+
+    @include main.sm
+    {
+        $size: 170px;
+        width: $size;
+        height: $size;
+        left: -60px;
+        bottom: -35px;
     }
 }
