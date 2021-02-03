@@ -7,9 +7,105 @@ body
     align-items: center;
 }
 
-h1
+img
 {
-    font-size: 5rem;
+    border-radius: 50%;
+    $size: 100px;
+    width: $size;
+    height: $size;
+    border: 3px solid main.$orange2;
+    box-sizing: content-box;
+}
+
+h1, p
+{
+    width: 100%;
+}
+
+p
+{
+    letter-spacing: .025rem;
+}
+
+a
+{
+    color: inherit;
     text-decoration: underline;
-    text-decoration-style: wavy;
+
+    &:hover
+    {
+        text-decoration-style: dotted;
+    }
+}
+
+#container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 300px;
+    overflow-y: auto;
+    max-height: 75%;
+    padding: 1rem;
+}
+
+@media screen and (min-width: main.$screen-sm-min)
+{
+    // fine as is
+}
+
+@media screen and (min-width: main.$screen-md-min)
+{
+    img
+    {
+        $size: 125px;
+        width: $size;
+        height: $size;
+    }
+
+    h1
+    {
+        font-size: 2.5rem;
+    }
+
+    p
+    {
+        font-size: 1.25rem;
+    }
+
+    #container
+    {
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: main.$screen-lg-min)
+{
+    // fine as is
+}
+
+@media screen and (min-width: main.$screen-xl-min)
+{
+    img
+    {
+        $size: 150px;
+        width: $size;
+        height: $size;
+    }
+
+    h1
+    {
+        font-size: 3rem;
+    }
+
+    p
+    {
+        font-size: 2rem;
+    }
+
+    #container
+    {
+        width: 900px;
+    }
 }

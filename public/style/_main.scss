@@ -34,12 +34,16 @@ html, body
     height: 100%;
 }
 
-
 body
 {
     background-color: $gray;
     font-family: "Roboto", sans-serif;
     color: $orange2;
+}
+
+h1, #navbar > a
+{
+    letter-spacing: .2rem;
 }
 
 #navbar
@@ -59,7 +63,6 @@ body
         font-size: .75rem;
         color: inherit;
         text-decoration: none;
-        letter-spacing: .2rem;
         margin-left: .75rem;
 
         &:hover

@@ -23,6 +23,10 @@ body {
   color: #FAC9B8;
 }
 
+h1, #navbar > a {
+  letter-spacing: 0.2rem;
+}
+
 #navbar {
   text-transform: uppercase;
   display: flex;
@@ -38,7 +42,6 @@ body {
   font-size: 0.75rem;
   color: inherit;
   text-decoration: none;
-  letter-spacing: 0.2rem;
   margin-left: 0.75rem;
 }
 #navbar a:hover {
