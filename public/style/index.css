@@ -63,16 +63,12 @@ body {
 }
 @media screen and (min-width: 992px) {
   #navbar a {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 @media screen and (min-width: 1200px) {
   #navbar {
     padding: 3rem;
-  }
-  #navbar a {
-    font-size: 1.5rem;
-    margin-left: 1.5rem;
   }
 }
 body {
