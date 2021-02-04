@@ -36,12 +36,13 @@ body {
 }
 #navbar a {
   font-size: 0.75rem;
-  color: inherit;
+  color: #C5DECD;
   text-decoration: none;
   margin-left: 0.75rem;
   letter-spacing: 0.2rem;
 }
 #navbar a:hover {
+  color: #A1E8CC;
   text-decoration: underline;
   text-decoration-style: dotted;
 }
@@ -80,28 +81,29 @@ body {
   align-items: center;
 }
 
-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
 h3 {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
 
 a {
-  color: inherit;
+  color: #C5DECD;
+  text-decoration: none;
 }
 a:hover {
+  text-decoration: underline;
   text-decoration-style: dotted;
+  color: #A1E8CC;
 }
 
 .row {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 1rem 0;
+  padding: 2rem 0;
+}
+.row h3 {
+  padding: 0.5rem 0;
 }
 .row ul {
   list-style: none;
@@ -109,23 +111,73 @@ a:hover {
 
 #container {
   width: 85%;
+  max-height: 800px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
-#current-projects {
+#image-row {
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px;
+  padding: 0;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+}
+#image-row img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
+  mask-image: radial-gradient(closest-side, black 80%, transparent 95%);
+  -webkit-mask-image: radial-gradient(closest-side, black 80%, transparent 95%);
+}
+
+#projects-row {
   justify-content: space-around;
   align-items: center;
   text-align: center;
 }
-#current-projects > * {
-  flex: 1;
+#projects-row ul li {
+  margin: 0.125rem 0;
 }
-#current-projects ul {
-  display: block;
+#projects-row ul li:not(li:last-child):after {
+  content: ", ";
+  white-space: pre;
+}
+
+#social-row {
+  text-align: center;
+}
+#social-row ul {
+  display: inline-flex;
+  margin: 0 auto;
+}
+#social-row ul li {
+  margin: 0 0.5rem;
+}
+
+@media screen and (min-width: 568px) {
+  #container {
+    max-height: 300px;
+    margin-top: 120px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #container {
+    max-height: 900px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #container {
+    max-height: 650px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #container {
+    max-height: 600px;
+    margin-top: 240px;
+  }
 }
 
 /*# sourceMappingURL=about.css.map */

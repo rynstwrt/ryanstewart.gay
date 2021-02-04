@@ -7,14 +7,6 @@ body
     align-items: center;
 }
 
-img
-{
-    $size: 100px;
-    width: $size;
-    height: $size;
-    border-radius: 50%;
-}
-
 h3
 {
     text-transform: uppercase;
@@ -23,19 +15,28 @@ h3
 
 a
 {
-    color: inherit;
+    color: main.$teal2;
+    text-decoration: none;
 
     &:hover
     {
+        text-decoration: underline;
         text-decoration-style: dotted;
+        color: main.$teal1;
     }
 }
 
 .row
 {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    padding: 1rem 0;
+    padding: 2rem 0;
+
+    h3
+    {
+        padding: .5rem 0;
+    }
 
     ul
     {
@@ -46,26 +47,100 @@ a
 #container
 {
     width: 85%;
+    max-height: 800px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100%;
 }
 
-#current-projects
+#image-row
+{
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px;
+    padding: 0;
+    margin-bottom: 2rem;
+    max-width: main.$screen-xl-min;
+
+    img
+    {
+        $size: 150px;
+        width: $size;
+        height: $size;
+        margin-bottom: 1rem;
+        mask-image: radial-gradient(closest-side, black 80%, transparent 95%);
+        // noinspection CssInvalidPropertyValue, CssInvalidFunction
+        -webkit-mask-image: radial-gradient(closest-side, black 80%, transparent 95%);
+    }
+}
+
+#projects-row
 {
     justify-content: space-around;
     align-items: center;
     text-align: center;
 
-    & > *
+    ul
     {
-        flex: 1;
+        li
+        {
+            margin: .125rem 0;
+        }
+
+        li:not(li:last-child):after
+        {
+            content: ", ";
+            white-space: pre;
+        }
     }
+}
+
+#social-row
+{
+    text-align: center;
 
     ul
     {
-        display: block;
+        display: inline-flex;
+        margin: 0 auto;
+
+        li
+        {
+            margin: 0 .5rem;
+        }
+    }
+}
+
+@media screen and (min-width: #{main.$screen-sm-min})
+{
+    #container
+    {
+        max-height: 300px;
+        margin-top: 120px;
+    }
+}
+
+@media screen and (min-width: #{main.$screen-md-min})
+{
+    #container
+    {
+        max-height: 900px;
+    }
+}
+
+@media screen and (min-width: #{main.$screen-lg-min})
+{
+    #container
+    {
+        max-height: 650px;
+    }
+}
+
+@media screen and (min-width: #{main.$screen-xl-min})
+{
+    #container
+    {
+        max-height: 600px;
+        margin-top: 240px;
     }
 }

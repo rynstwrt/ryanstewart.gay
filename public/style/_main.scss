@@ -56,13 +56,14 @@ body
     a
     {
         font-size: .75rem;
-        color: inherit;
+        color: $teal2;
         text-decoration: none;
         margin-left: .75rem;
         letter-spacing: .2rem;
 
         &:hover
         {
+            color: $teal1;
             text-decoration: underline;
             text-decoration-style: dotted;
         }

@@ -36,12 +36,13 @@ body {
 }
 #navbar a {
   font-size: 0.75rem;
-  color: inherit;
+  color: #C5DECD;
   text-decoration: none;
   margin-left: 0.75rem;
   letter-spacing: 0.2rem;
 }
 #navbar a:hover {
+  color: #A1E8CC;
   text-decoration: underline;
   text-decoration-style: dotted;
 }
