@@ -13,7 +13,6 @@ h1
     border-bottom: 4px solid main.$orange2;
     border-right: 4px solid main.$orange2;
     margin: 2rem auto;
-    width: 250px;
     text-align: center;
 }
 
@@ -24,11 +23,9 @@ ul
         list-style: square;
         margin: 1rem 0;
 
-        &:after
+        &:last-child
         {
-            content: ", ";
-            white-space: pre;
-            color: main.$teal2;
+            padding-bottom: 4rem;
         }
     }
 }
@@ -44,18 +41,49 @@ a
     }
 }
 
-@media screen and (min-width: main.$screen-sm-min)
+#container
 {
-    #container
+    max-width: 80%;
+    max-height: 70%;
+}
+
+@media screen and (min-width: #{main.$screen-sm-min})
+{
+    h1
     {
-        margin-top: 1.5rem;
+        font-size: 2.5rem;
+    }
+
+    ul
+    {
+        padding: 0 2rem;
+        margin-bottom: 2rem;
     }
 }
 
-@media screen and (min-width: main.$screen-sm-min)
+@media screen and (min-width: #{main.$screen-md-min})
 {
-    #container
+    h1
     {
-        margin-top: 1.5rem;
+        font-size: 3rem;
     }
+
+    ul
+    {
+
+        li
+        {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@media screen and (min-width: #{main.$screen-lg-min})
+{
+    // fine as is
+}
+
+@media screen and (min-width: #{main.$screen-xl-min})
+{
+    // fine as is
 }
