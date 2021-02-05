@@ -1,0 +1,61 @@
+@use "../style/main";
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1
+{
+    text-transform: uppercase;
+    border-bottom: 4px solid main.$orange2;
+    border-right: 4px solid main.$orange2;
+    margin: 2rem auto;
+    width: 250px;
+    text-align: center;
+}
+
+ul
+{
+    li
+    {
+        list-style: square;
+        margin: 1rem 0;
+
+        &:after
+        {
+            content: ", ";
+            white-space: pre;
+            color: main.$teal2;
+        }
+    }
+}
+
+a
+{
+    color: main.$teal2;
+
+    &:hover
+    {
+        color: main.$teal1;
+        text-decoration-style: dotted;
+    }
+}
+
+@media screen and (min-width: main.$screen-sm-min)
+{
+    #container
+    {
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (min-width: main.$screen-sm-min)
+{
+    #container
+    {
+        margin-top: 1.5rem;
+    }
+}

@@ -4,7 +4,6 @@ body
 {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 h3
@@ -48,6 +47,7 @@ a
 {
     width: 85%;
     max-height: 800px;
+    margin: 100px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,24 +74,14 @@ a
     }
 }
 
-#projects-row
+#text-row
 {
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
+    max-width: main.$screen-xl-min;
 
-    ul
+    p
     {
-        li
-        {
-            margin: .125rem 0;
-        }
-
-        li:not(li:last-child):after
-        {
-            content: ", ";
-            white-space: pre;
-        }
+        font-size: 1.1rem;
+        letter-spacing: .05rem;
     }
 }
 
@@ -116,7 +106,7 @@ a
     #container
     {
         max-height: 300px;
-        margin: 120px 0;
+        margin: 100px 0;
     }
 }
 
@@ -125,6 +115,7 @@ a
     #container
     {
         max-height: 900px;
+        margin: 200px 0;
     }
 }
 
@@ -141,6 +132,6 @@ a
     #container
     {
         max-height: 600px;
-        margin: 240px 0;
+        margin: 300px 0;
     }
 }

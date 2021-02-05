@@ -14,6 +14,11 @@ app.get("/about", (req, res) =>
     res.render("about");
 });
 
+app.get("/projects", (req, res) =>
+{
+    res.render("projects");
+});
+
 const port = process.env.PORT || 80;
 app.listen(port, () =>
 {

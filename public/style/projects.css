@@ -74,102 +74,45 @@ body {
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-h3 {
+h1 {
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  border-bottom: 4px solid #FAC9B8;
+  border-right: 4px solid #FAC9B8;
+  margin: 2rem auto;
+  width: 250px;
+  text-align: center;
+}
+
+ul li {
+  list-style: square;
+  margin: 1rem 0;
+}
+ul li:after {
+  content: ", ";
+  white-space: pre;
+  color: #C5DECD;
 }
 
 a {
   color: #C5DECD;
-  text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
-  text-decoration-style: dotted;
   color: #A1E8CC;
-}
-
-.row {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 2rem 0;
-}
-.row h3 {
-  padding: 0.5rem 0;
-}
-.row ul {
-  list-style: none;
-}
-
-#container {
-  width: 85%;
-  max-height: 800px;
-  margin: 100px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#image-row {
-  justify-content: center;
-  align-items: center;
-  box-shadow: 10px 10px;
-  padding: 0;
-  margin-bottom: 2rem;
-  max-width: 1200px;
-}
-#image-row img {
-  width: 150px;
-  height: 150px;
-  margin-bottom: 1rem;
-  mask-image: radial-gradient(closest-side, black 80%, transparent 95%);
-  -webkit-mask-image: radial-gradient(closest-side, black 80%, transparent 95%);
-}
-
-#text-row {
-  max-width: 1200px;
-}
-#text-row p {
-  font-size: 1.1rem;
-  letter-spacing: 0.05rem;
-}
-
-#social-row {
-  text-align: center;
-}
-#social-row ul {
-  display: inline-flex;
-  margin: 0 auto;
-}
-#social-row ul li {
-  margin: 0 0.5rem;
+  text-decoration-style: dotted;
 }
 
 @media screen and (min-width: 568px) {
   #container {
-    max-height: 300px;
-    margin: 100px 0;
+    margin-top: 1.5rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 568px) {
   #container {
-    max-height: 900px;
-    margin: 200px 0;
-  }
-}
-@media screen and (min-width: 992px) {
-  #container {
-    max-height: 650px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #container {
-    max-height: 600px;
-    margin: 300px 0;
+    margin-top: 1.5rem;
   }
 }
 
-/*# sourceMappingURL=about.css.map */
+/*# sourceMappingURL=projects.css.map */
