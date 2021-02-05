@@ -89,7 +89,7 @@ body
 
         a
         {
-            font-size: 1rem;
+            font-size: .9rem;
             margin-left: 1rem;
         }
     }
@@ -97,13 +97,6 @@ body
 
 @media screen and (min-width: #{$screen-lg-min})
 {
-    #navbar
-    {
-        a
-        {
-            font-size: 1rem;
-        }
-    }
 }
 
 @media screen and (min-width: #{$screen-xl-min})
