@@ -9,7 +9,7 @@ const app = express();
 app.set("view engine", "pug");
 app.set("views", __dirname + "/views")
 app.use(express.static(__dirname + "/public"));
-const youtubedl = require("youtube-dl-exec"); // used for bandcamp as well
+const youtubedl = require("@rynstwrt/youtube-dl-exec-nojson"); // used for bandcamp as well
 const fs = require("fs");
 
 
@@ -44,6 +44,8 @@ app.get("/api/bandcamp", async (req, res) =>
     const bandcampUrl = decodeURI(req.query.url);
     const filename = decodeURI(req.query.filename);
 
+    // TODO: with no params, shows non-bandcamp url error instead of forgot url and filename
+
     if (!(bandcampUrl && filename))
     {
         res.status(400).send("Forgot url and/or filename parameter(s)!");
@@ -58,7 +60,7 @@ app.get("/api/bandcamp", async (req, res) =>
     }
 
     // download file
-    const downloadLocation = `${__dirname}/public/apis/bandcamp/${filename}.mp3`;
+    const downloadLocation = `${__dirname}/apis/bandcamp/downloads/${filename}.mp3`;
     youtubedl(bandcampUrl, {
         noWarnings: true,
         noCallHome: true,
