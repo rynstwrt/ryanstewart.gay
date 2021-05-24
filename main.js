@@ -5,7 +5,7 @@ const p = document.getElementById("sub-text");
 const links = document.getElementById("links");
 
 const transitionTime = .5;
-const initDelay = 1;
+const initDelay = 1.5;
 
 const barCount = leftBars.length;
 const boxShadow = "0 0 5px rgba(0, 0, 0, .5)";
